@@ -146,41 +146,41 @@ total = [
         'subtype': '评论者性别分布',
         'content': {
             'political': [{
-                'value': 1147,
+                'value': 433,
                 'name': '男'
             },
                 {
-                'value': 767,
+                'value': 114,
                 'name': '女'
             },
                 {
-                'value': 708,
+                'value': 255,
                 'name': '未填写'
             }
             ],
             'culture': [{
-                'value': 227,
+                'value': 160,
                 'name': '男'
             },
                 {
-                'value': 131,
+                'value': 40,
                 'name': '女'
             },
                 {
-                'value': 142,
+                'value': 75,
                 'name': '未填写'
             }
             ],
             'social': [{
-                'value': 498,
+                'value': 1307,
                 'name': '男'
             },
                 {
-                'value': 330,
+                'value': 1098,
                 'name': '女'
             },
                 {
-                'value': 726,
+                'value': 1290,
                 'name': '未填写'
             }
             ]
@@ -216,6 +216,43 @@ total = [
             'politics': majPolitics,
             'culture': majCulture,
             'social': majSocial
+        }
+    },
+    {
+        'typeId': 8,
+        'type': '评论分析',
+        'subtype': '评论情感分析',
+        'content': {
+            'politics': [
+                {
+                    'name': '积极',
+                    'value': 463
+                },
+                {
+                    'name': '消极',
+                    'value': 691
+                }
+            ],
+            'culture': [
+                {
+                    'name': '积极',
+                    'value': 243
+                },
+                {
+                    'name': '消极',
+                    'value': 250
+                }
+            ],
+            'social': [
+                {
+                    'name': '积极',
+                    'value': 2365
+                },
+                {
+                    'name': '消极',
+                    'value': 1980
+                }
+            ],
         }
     }
 ]

@@ -1,0 +1,1 @@
+# 不要忘了把/home/doubtd/.virtualenvs/ana3/lib/python3.6/site-packages/django/test/testcases.py的209、210行改回去
