@@ -32,7 +32,6 @@ def get_chart(request):
     typeId = request.POST['typeId']
     try:
         obj = chart.objects.filter(typeId=typeId)[0]
-        print(obj)
         typeId = obj.typeId
         type = obj.type
         content = obj.content
