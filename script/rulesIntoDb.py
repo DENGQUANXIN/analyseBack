@@ -1,7 +1,7 @@
 import pandas as pd
 from pymongo import MongoClient
 
-df = pd.read_csv("./rules/all.txt")
+df = pd.read_csv("./data/rules/all.txt")
 dfgpByWord1 = df.groupby("word1")
 dfgpByWord2 = df.groupby("word2")
 

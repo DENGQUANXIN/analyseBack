@@ -2,18 +2,18 @@ from pymongo import MongoClient
 import json
 
 # 词云数据整理
-with open('./wordcloud.json', 'r') as fp:
+with open('./data/wordcloud.json', 'r') as fp:
     temp = json.loads(fp.read())
     wordcloud = []
     for key, value in temp.items():
         wordcloud.append({"name": key, "value": value})
 
 # 行业数据整理
-with open('./政治/business.json', 'r') as fp:
+with open('./data/政治/business.json', 'r') as fp:
     business1 = json.loads(fp.read())
-with open('./文化/business.json', 'r') as fp:
+with open('./data/文化/business.json', 'r') as fp:
     business2 = json.loads(fp.read())
-with open('./社会/business.json', 'r') as fp:
+with open('./data/社会/business.json', 'r') as fp:
     business3 = json.loads(fp.read())
 
 keyList = list(set(business1.keys()) | set(business2.keys()) | set(business3.keys()))
@@ -30,11 +30,11 @@ for key in keyList:
     busSocial.append(value)
 
 # 专业数据整理
-with open('./政治/major.json', 'r') as fp:
+with open('./data/政治/major.json', 'r') as fp:
     major1 = json.loads(fp.read())
-with open('./文化/major.json', 'r') as fp:
+with open('./data/文化/major.json', 'r') as fp:
     major2 = json.loads(fp.read())
-with open('./社会/major.json', 'r') as fp:
+with open('./data/社会/major.json', 'r') as fp:
     major3 = json.loads(fp.read())
 
 keyList = list(set(major1.keys()) | set(major2.keys()) | set(major3.keys()))
@@ -51,24 +51,24 @@ for key in keyList:
     majSocial.append(value)
 
 # 位置数据整理
-with open('./city_coordinates.json', 'r') as fp:
+with open('./data/city_coordinates.json', 'r') as fp:
     coordinates = json.loads(fp.read())
 
 locPolitics = []
 locCulture = []
 locSocial = []
-with open('./政治/location.json', 'r') as fp:
+with open('./data/政治/location.json', 'r') as fp:
     loc1 = json.loads(fp.read())
     for key, value in loc1.items():
         if key in coordinates.keys():
             locPolitics.append({'name': key, 'value': coordinates[key]+[value]})
 
-with open('./文化/location.json', 'r') as fp:
+with open('./data/文化/location.json', 'r') as fp:
     loc2 = json.loads(fp.read())
     for key, value in loc2.items():
         if key in coordinates.keys():
             locCulture.append({'name': key, 'value': coordinates[key]+[value]})
-with open('./社会/location.json', 'r') as fp:
+with open('./data/社会/location.json', 'r') as fp:
     loc3 = json.loads(fp.read())
     for key, value in loc3.items():
         if key in coordinates.keys():
