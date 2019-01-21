@@ -226,31 +226,31 @@ total = [
             'politics': [
                 {
                     'name': '积极',
-                    'value': 463
+                    'value': 330
                 },
                 {
                     'name': '消极',
-                    'value': 691
+                    'value': 473
                 }
             ],
             'culture': [
                 {
                     'name': '积极',
-                    'value': 243
+                    'value': 131
                 },
                 {
                     'name': '消极',
-                    'value': 250
+                    'value': 145
                 }
             ],
             'social': [
                 {
                     'name': '积极',
-                    'value': 2365
+                    'value': 1708
                 },
                 {
                     'name': '消极',
-                    'value': 1980
+                    'value': 1988
                 }
             ],
         }
